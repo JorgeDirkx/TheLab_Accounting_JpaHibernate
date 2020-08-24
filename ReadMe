@@ -1,0 +1,19 @@
+Maven Jpa/Hibernate feature with MySQL.
+
+1. Setting up the EntityManagerFactory to connect with DB.
+2. EntityManager allows you to work with the DB.
+3. Turning classing into entities: use the annotation @Entity
+   in order to use .persist and @Id for primary key
+4.  em.getTransaction().begin();
+           instructions to the DB and inserting records:
+           em.persist(invoicIn1);
+           em.getTransaction().commit();
+           em.close();
+           emf.close();
+5. other features:
+* update records: em.merge();
+* delete records: em.remove();
+* finding a record user with x id
+  Integer primaryKey = 4;
+  User user1 = em.find(User.class, primaryKey);
+  System.out.println(user1);

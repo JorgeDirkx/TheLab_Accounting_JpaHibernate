@@ -1,9 +1,6 @@
 package com.jorgedirkx.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -15,6 +12,7 @@ public class InvoiceOut {
     private int id;
     private String client;
     private int amount;
+    @Column(name="date_invoice_")
     private Date date;
     private String received;
 

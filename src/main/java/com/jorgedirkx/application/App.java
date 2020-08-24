@@ -5,8 +5,11 @@ import com.jorgedirkx.entities.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import java.time.LocalDateTime;
+
+import static javax.persistence.Persistence.*;
 
 public class App {
 
@@ -27,8 +30,8 @@ public class App {
 
         em.getTransaction().begin();
         em.persist(invoicIn1);
-
         em.getTransaction().commit();
+
 
         em.close();
         emf.close();

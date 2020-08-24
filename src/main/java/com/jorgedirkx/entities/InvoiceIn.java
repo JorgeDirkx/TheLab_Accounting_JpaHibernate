@@ -12,6 +12,7 @@ public class InvoiceIn {
     private int id;
     private String service;
     private int amount;
+    @Column(name="date")
     private Date date;
     private String paid;
 
